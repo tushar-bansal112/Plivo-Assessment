@@ -229,7 +229,7 @@ docker run -p 3000:3000 \
   plivo-pubsub
 ```
 
-The service will be available on `http://localhost:8080`
+The service will be available on `http://localhost:3000`
 
 ### Environment Variables
 
