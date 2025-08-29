@@ -107,7 +107,7 @@ curl -X DELETE \
 
 ```javascript
 // Using browser console or Node.js
-const ws = new WebSocket('ws://localhost:3000/ws?apiKey=abc');
+const ws = new WebSocket('ws://localhost:3000/ws?apiKey=918871db-7354-4ddb-835f-b7fab4a60306');
 
 ws.onopen = () => {
   console.log('Connected to WebSocket');
