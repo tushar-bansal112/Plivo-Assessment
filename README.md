@@ -105,6 +105,15 @@ curl -X DELETE \
 
 #### 1. Connect to WebSocket
 
+**Option A: Using npx wscat (Recommended for CLI testing)**
+
+```bash
+# Or use npx directly
+npx wscat -c "ws://localhost:3000/ws?apiKey=918871db-7354-4ddb-835f-b7fab4a60306"
+```
+
+**Option B: Using browser console or Node.js**
+
 ```javascript
 // Using browser console or Node.js
 const ws = new WebSocket('ws://localhost:3000/ws?apiKey=918871db-7354-4ddb-835f-b7fab4a60306');
@@ -160,22 +169,6 @@ ws.send(JSON.stringify({
 ws.send(JSON.stringify({
   type: 'ping',
   request_id: 'ping-001'
-}));
-```
-
-#### 2. Publish Messages via WebSocket
-
-```javascript
-// Publish a message to a topic via WebSocket
-ws.send(JSON.stringify({
-  type: 'publish',
-  topic: 'test-topic',
-  message: {
-    id: 'msg-001',
-    content: 'Hello, World!',
-    timestamp: new Date().toISOString()
-  },
-  request_id: 'req-001'
 }));
 ```
 
