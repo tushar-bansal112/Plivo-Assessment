@@ -223,10 +223,8 @@ docker build -t plivo-pubsub .
 ### Run the Container
 
 ```bash
-docker run -p 3000:3000 \
-  -e PORT=8080 \
-  -e API_KEY=your-api-key \
-  plivo-pubsub
+docker run --rm -p 3000:3000 -e API_KEY=918871db-7354-4ddb-835f-b7fab4a60306 plivo-pubsub
+
 ```
 
 The service will be available on `http://localhost:3000`
